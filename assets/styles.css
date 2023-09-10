@@ -229,7 +229,7 @@ body{
   text-transform:lowercase;
 }
 .add-cart{
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   cursor: pointer;
@@ -336,7 +336,7 @@ body{
   }
 
   .splide__track {
-    height: 370px;
+    height: 470px;
     border-radius: 10px;
   }
   .thumbnails {
@@ -381,6 +381,9 @@ body{
     display: none;
    }
    .splide__track {
+    height: 430px;
+  }
+  .splide__custom{
     height: 380px;
   }
 }
