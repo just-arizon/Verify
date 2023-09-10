@@ -1,0 +1,16 @@
+$font-family-sans-serif: "Poppins","Montserrat",sans-serif;
+$body-bg: #060505;
+$body-color: #ffffff;
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+// custom theme colors
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+// merge the maps to add new theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+@import "../node_modules/bootstrap/scss/bootstrap";

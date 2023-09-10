@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root{
   --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
 }
@@ -13,6 +19,9 @@
 .navmenu_prolinks{
   padding-left: 4.5rem;
 }
+body{
+  overflow-x: hidden;
+}
 .gradient-text{
   -webkit-text-fill-color:transparent;
   -webkit-background-clip: text;
@@ -26,6 +35,25 @@
 }
 .fw_secondary_custom-css{
     font-size: 1.6rem;
+}
+.hr {
+  position: relative;
+  top: -1rem;
+  margin-top: 2rem;
+  /* margin-bottom: .9rem; */
+  display: flex;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.hr div{
+  height: .1px;
+  background-color: #9a9999fe;
+  width: 10rem;
+}
+.anchor{
+  position: relative;
+  top: -8px;
 }
 .box {
     transition: .5s linear;
@@ -81,29 +109,129 @@
     transform: translateX(0);
     transition: .3s transform linear, .3s height linear .5s;
   }
-  
+  .spiral_shape{
+    position: absolute;
+    left: -6rem;
+    z-index: -100;
+    /* background-color: #878585; */
+    width: 50%;
+    opacity: .7;
+  }
+  .spiral_shape-two{
+    position: absolute;
+    top: 20rem;
+    right: 2rem;
+    z-index: -100;
+    transform: rotate(185deg);
+    /* background-color: #878585; */
+    width: 20%;
+    opacity: .7;
+  }
+  @media(max-width: 910px){
+    .spiral_shape,
+    .spiral_shape-two{
+      display: none;
+    }
+  }
   button {
-    color: black;
-    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
     cursor: pointer;
-    outline: none;
-    border: none;
-    background: transparent;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #f49867 0%, #ae67fa 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
   }
-.testbutton {
-    width: 200px;
-    height: 40px;
-    background: #ae67fa;
-    color: #ffff;
-    box-shadow: -6px 6px 0 0 #f49867 ;
-    border: none;
-    outline: none;
-    position: relative;
-    font-size: .9rem;
-    text-transform: capitalize;
+  
+  button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.3em 0px #f49867;
+    transform: translateY(-0.1em);
   }
-
+  
+  button:active {
+    box-shadow: inset 0px 0.3em 0.6em #f49867;
+    transform: translateY(0em);
+  }
+  .btn--tabs{
+    margin-right: .5rem;
+  }
+  .tabs{
+    /* background-color: #FFFFFF; */
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    color: #ae67fa;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
+  .tabs:hover {
+    background-color: #f9fafb;
+  }
+  
+  .tabs:focus {
+    outline: 2px solid #f49867;
+    outline-offset: 2px;
+  }
+  
+  .tabs:focus-visible {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .custom-list{
+    list-style: none;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+  }
 .hamburger{
+  cursor: pointer;
+}
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+  gap: 1.5rem;
+}
+.product-img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.product-box{
+  position: relative;
+}
+.product-box:hover{
+  padding: 5px;
+  border: 1px solid var(--gradient-text);
+  transition: .4s;
+}
+.product-title{
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  text-transform:lowercase;
+}
+.add-cart{
+  position: absolute;
+  right: 0;
+  bottom: 0;
   cursor: pointer;
 }
    /* media query */
@@ -199,6 +327,9 @@
     width: 84px;
     height: auto;
   }
+  
+  /* Splide-CSS */
+
   .splide__slide{
     height: 100px;
     border-radius: 10px;
