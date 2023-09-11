@@ -361,6 +361,7 @@ li.img-svg svg {
   width: 100px;
   height: auto;
 }
+
 .svg {
   display: flex;
   flex-direction: column;
