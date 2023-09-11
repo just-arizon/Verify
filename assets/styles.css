@@ -224,6 +224,7 @@ button.cta-btn:active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   gap: 2.5rem;
+  margin-right: 1em;
 }
 .product-img {
   width: 100%;
@@ -242,6 +243,11 @@ button.cta-btn:active {
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
+  padding-top: .1em;
+}
+.product-review{
+  position: relative;
+  right: 0;
 }
 .add-cart {
   position: relative;
@@ -379,9 +385,7 @@ li.img-svg svg {
 .svg img {
   color: #ae67fa;
 }
-#lottie-animation{
- 
-}
+
 /* media query */
 @media (max-width: 573px) {
   nav div.menu-container,
