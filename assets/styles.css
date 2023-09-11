@@ -379,6 +379,9 @@ li.img-svg svg {
 .svg img {
   color: #ae67fa;
 }
+#lottie-animation{
+ 
+}
 /* media query */
 @media (max-width: 573px) {
   nav div.menu-container,
