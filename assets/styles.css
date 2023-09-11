@@ -144,9 +144,24 @@ body{
     text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
     transition: box-shadow 0.15s ease, transform 0.15s ease;
   }
-  
-  button.cta-btn:hover {
-    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.3em 0px #f49867;
+  button.purchase-btn{
+    font-size: 16px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #f49867 0%, #ae67fa 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 1em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  button.cta-btn,
+  button.purchase-btn:hover {
     transform: translateY(-0.1em);
   }
   
@@ -202,7 +217,7 @@ body{
 .product-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px,auto));
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 .product-img{
   width: 100%;
@@ -212,21 +227,20 @@ body{
 .product-box{
   position: relative;
 }
-.product-box:hover{
-  padding: 5px;
-  border: 1px solid var(--gradient-text);
+.product-img:hover{
+  border: 5px solid #ae67fa;
   transition: .4s;
 }
 .product-title{
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: .5rem;
-  text-transform:lowercase;
+  text-transform: capitalize;
 }
 .add-cart{
   position: relative;
   right: 0;
-  bottom: 0;
+  top: .2em;
   cursor: pointer;
 }
 

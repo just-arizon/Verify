@@ -14,3 +14,14 @@ $custom-theme-colors: (
 // merge the maps to add new theme colors
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// Override navbar link colors
+.navbar {
+    .nav-link {
+      color: #878585; // Change the link color to #333
+      transition: .3s ease-in-out;
+    }
+    .nav-link:hover {
+      color: #ffff; // Change the link color to red
+    }
+  }
