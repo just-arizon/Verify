@@ -13,6 +13,7 @@ $custom-theme-colors: (
 );
 // merge the maps to add new theme colors
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
+// Import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Override navbar link colors

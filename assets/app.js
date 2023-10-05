@@ -1,3 +1,5 @@
+
+
 const hamburger = document.querySelector(".hamburger");
 const menuItems = document.querySelectorAll(".nav-item")
 const smallMenuContainer = document.querySelector(".small_screen-menu-container")
